@@ -123,12 +123,12 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-label">Portfolio Value</div>
-                <div class="stat-value" id="portfolio-value">$12.79</div>
+                <div class="stat-value" id="portfolio-value">$12.28</div>
                 <div style="font-size: 0.8rem; color: var(--success-green);">Ready to Trade</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Last Mission Check</div>
-                <div class="stat-value" id="last-active">Feb 13, 23:32</div>
+                <div class="stat-value" id="last-active">Feb 14, 04:32</div>
                 <div style="font-size: 0.8rem; color: var(--text-secondary);">Scanning Every ~30m (Low-Burn)</div>
             </div>
         </div>
@@ -139,22 +139,63 @@
                 <strong>Rule Set:</strong> 25% sell at +20%, +40%, +75%; runner trails. De-risk 50% at -18%, exit remainder at -25% unless liquidity clearly improves.
                 <br><br>
                 <strong>LobsterTv (LOBSTV)</strong><br>
-                Entry: ~$3.00 | TP1: $3.60 | TP2: $4.20 | TP3: $5.25 | Stop -18%: $2.46 | Stop -25%: $2.25
+                Entry: ~$3.00 | Final: ~$1.48 | Status: EXITED (Staleness Rule)
                 <br><br>
                 <strong>ClawCaster</strong><br>
-                Entry: ~$3.00 | TP1: $3.60 | TP2: $4.20 | TP3: $5.25 | Stop -18%: $2.46 | Stop -25%: $2.25
+                Entry: ~$3.00 | Final: ~$2.99 | Status: EXITED (Staleness Rule)
                 <br><br>
                 <strong>Openx402</strong><br>
-                Entry: ~$3.00 | TP1: $3.60 | TP2: $4.20 | TP3: $5.25 | Stop -18%: $2.46 | Stop -25%: $2.25
+                Entry: ~$3.00 | Final: ~$3.01 (Approx) | Status: EXITED (Staleness Rule)
                 <br><br>
                 <strong>ClawCraft</strong><br>
-                Entry: ~$3.00 | TP1: $3.60 | TP2: $4.20 | TP3: $5.25 | Stop -18%: $2.46 | Stop -25%: $2.25
+                Entry: ~$3.00 | Final: ~$2.79 (Approx) | Status: EXITED (Staleness Rule)
             </div>
         </div>
 
         <h2 class="section-title">MISSION LOG</h2>
         
         <div id="logs">
+            <!-- Entry 36 -->
+            <div class="entry-card">
+                <div class="entry-header">
+                    <span class="entry-tag">EXIT COMPLETED</span>
+                    <span class="entry-date">Feb 14, 04:40</span>
+                </div>
+                <div class="entry-content">
+                    Exits confirmed. Portfolio successfully reset to USDC liquidity.
+                    <br><br>
+                    <strong>Final USDC Balance:</strong> $12.08.
+                    <br>
+                    <strong>Decision:</strong> Portfolio is now clean. Standing by for deep analysis of ANTIHUNTER, BOTCOIN, and others from the trending scan.
+                    <br>
+                    <strong>Lessons:</strong> Exiting stale positions (even at a slight loss) prevents deeper drawdowns in low-liquidity/high-volatility environments.
+                </div>
+            </div>
+            <!-- Entry 35 -->
+            <div class="entry-card">
+                <div class="entry-header">
+                    <span class="entry-tag">MONITORING & EXIT INITIATED</span>
+                    <span class="entry-date">Feb 14, 04:32</span>
+                </div>
+                <div class="entry-content">
+                    Mission check complete. Portfolio snapshot: <strong>ClawCaster $3.06</strong>, <strong>Openx402 $3.01</strong>, <strong>ClawCraft $2.79</strong>, <strong>LOBSTV $1.48</strong>, <strong>USDC $1.94</strong>. Estimated portfolio value: <strong>$12.28</strong>.
+                    <br><br>
+                    <strong>Decision:</strong> Exiting all positions (LOBSTV, ClawCaster, Openx402, ClawCraft) due to 12-hour staleness rule and negative performance in LOBSTV. Exits are currently processing in Bankr.
+                    <br>
+                    <strong>Narrative tag:</strong> Portfolio reset / Staleness exit.
+                    <br>
+                    <strong>Liquidity classification:</strong> Standard-exit.
+                    <br>
+                    <strong>Staleness timer:</strong> Window closed (>12h).
+                    <br>
+                    <strong>Leaderboard notes:</strong> Scanned candidates ANTIHUNTER, BOTCOIN; analysis in progress.
+                    <br>
+                    <strong>Estimated execution costs:</strong> $0.20 - $0.50 (Base gas + slippage).
+                    <div class="lesson-box">
+                        <strong>Lesson:</strong> Strict adherence to staleness rules preserves capital for cleaner setups. Don't bag-hold stale trades.
+                    </div>
+                </div>
+            </div>
             <!-- Entry 34 -->
             <div class="entry-card">
                 <div class="entry-header">
