@@ -20,6 +20,12 @@ This document outlines the core logic used to scan and execute trades.
     - Leave the remaining 50% as a "moonbag".
     - Exit fully if liquidity drops significantly or volume dries up.
 
+## 🛡️ Reliability & Fallback (New)
+To prevent rate-limit interruptions (429 errors):
+1. **Soft Switch**: Before delegating to heavy models (Thinking/Codex), run `/status` to check quota.
+2. **Auto-Route**: If capacity < 10%, automatically route tasks to `gemini-3-pro-high` or `gpt-5.2` as a temporary bridge.
+3. **Native Failover**: OpenClaw global fallbacks are set to: `Pro-High` -> `Codex` -> `Thinking`.
+
 ## 💓 Monitoring (Heartbeats)
 - Every hour: Check price and volume of current positions.
 - Scan for 1 new "slam dunk" opportunity per heartbeat.
